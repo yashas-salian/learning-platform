@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, type JSX } from "react";
 
 export default function AITutorSlidingAuth(): JSX.Element {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -154,7 +154,7 @@ export default function AITutorSlidingAuth(): JSX.Element {
         <div className="form-container sign-in-container">
           <form className="ai-form" onSubmit={handleSignIn}>
             <div className="ai-avatar">🤖</div>
-            <h1 className="text-2xl font-bold text-blue-600 mb-4">Welcome Back</h1>
+            <h1 className="text-2xl font-semibold text-black mb-4">Welcome Back</h1>
             <p className="text-blue-600 mb-6">Continue your AI-powered learning journey</p>
             <input
               className="ai-input"
@@ -190,7 +190,7 @@ export default function AITutorSlidingAuth(): JSX.Element {
         <div className="overlay-container">
           <div className="overlay">
             <div className="overlay-panel overlay-left">
-              <h1 className="text-3xl font-bold mb-4 neon-glow">Welcome Back!</h1> <br></br>
+              <h1 className="text-3xl font-bold mb-4 neon-glow text-black">Welcome Back!</h1> <br></br>
               <p className="mb-6 text-lg">
                 Your AI tutor has been waiting! Continue your personalized learning journey.
               </p>
@@ -260,17 +260,17 @@ export default function AITutorSlidingAuth(): JSX.Element {
         .overlay-right { right: 0; transform: translateX(0); }
         .container.right-panel-active .overlay-right { transform: translateX(20%); }
 
-        .ai-form { background: rgba(255,255,255,0.95); display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 0 50px; height: 100%; text-align: center; }
+        .ai-form { background: rgba(255,255,255,0.95); display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 0 50px; height: 100%; text-align: center; color: #0a2079ff; }
         .ai-input { background: rgba(0,31,77,0.1); border: 2px solid rgba(0,31,77,0.3); border-radius: 12px; padding: 15px 20px; margin: 8px 0; width: 100%; font-size: 14px; transition: all 0.3s ease; color: #333; }
         .ai-input:focus { outline: none; border-color: #001f4d; box-shadow: 0 0 0 3px rgba(0,31,77,0.1); transform: translateY(-2px); }
-        .ai-button { border-radius: 20px; border: none; background: linear-gradient(135deg, #001f4d 0%, #003366 100%); color: #fff; font-size: 14px; font-weight: 600; padding: 15px 45px; letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden; }
+        .ai-button { border-radius: 20px; border: none; background: linear-gradient(135deg, #001f4d 0%, #003366 100%); color: #e6e9efff; font-size: 14px; font-weight: 600; padding: 15px 45px; letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; position: relative; overflow: hidden; }
         .ai-button:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,31,77,0.3); }
         .ai-button::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s; }
         .ai-button:hover::before { left: 100%; }
         .ghost-button { background: transparent; border: 2px solid #fff; color: #fff; }
         .ghost-button:hover { background: rgba(255,255,255,0.1); transform: translateY(-2px); }
         .ai-avatar { width: 80px; height: 80px; background: linear-gradient(135deg, #001f4d 0%, #003366 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 20px; animation: pulse 2s infinite; box-shadow: 0 10px 30px rgba(0,31,77,0.3); }
-        @keyframes pulse { 0%{ transform: scale(1); box-shadow: 0 10px 30px rgba(0,31,77,0.3);} 50%{ transform: scale(1.05); box-shadow: 0 15px 40px rgba(0,31,77,0.5);} 100%{ transform: scale(1); box-shadow: 0 10px 30px rgba(0,31,77,0.3);} }
+        @keyframes pulse { 0%{ transform: scale(1); box-shadow: 0 10px 30px rgba(0,31,77,0.3);} 50%{ transform: scale(1.05); box-shadow: 0 15px 40px rgba(234, 234, 234, 0.5);} 100%{ transform: scale(1); box-shadow: 0 10px 30px rgba(0,31,77,0.3);} }
         .typing-animation { display: inline-flex; align-items: center; }
         .typing-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; margin: 0 2px; animation: typing 1.4s infinite; }
         .typing-dot:nth-child(2) { animation-delay: 0.2s; }
